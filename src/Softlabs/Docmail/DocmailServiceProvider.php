@@ -38,14 +38,5 @@ class DocmailServiceProvider extends ServiceProvider {
 		return array();
 	}
 
-    /**
-     * Bootstrap the application events.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->package('Softlabs/Docmail');
-    }
 
 }

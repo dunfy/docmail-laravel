@@ -16,8 +16,6 @@ class Docmail {
         $options = array_merge($data, $options);
         $options = self::processParameterNames($options);
 
-        try {
-
             DocmailAPI::validateCall(['CreateMailing'], $options);
             $mailingGUID = DocmailAPI::CreateMailing($options);
             $options["MailingGUID"] = $mailingGUID;
@@ -30,9 +28,6 @@ class Docmail {
 
             $result = DocmailAPI::ProcessMailing($options);
 
-        } catch (\Exception $e) {
-            throw new \Exception($e->getMessage());
-        }
 
         return $result;
 

@@ -25,6 +25,7 @@ class DocmailAPI {
         "AddressNameFormat" => "Full Name",
         "TestMode"          => true,
         "DespatchASAP"      => true,
+        "CourierDeliveryToSelf" => false,
         "CanBeginOnBack"    => false
     ];
 
@@ -42,6 +43,7 @@ class DocmailAPI {
         "TestMode"            => "required",
         "CustomerApplication" => "",
         "DespatchASAP"        => "",
+        "CourierDeliveryToSelf" => "",
         "ProductType"         => "",
         "IsMono"              => "",
         "IsDuplex"            => "",
@@ -100,6 +102,7 @@ class DocmailAPI {
         );
 
         $result = self::apiCall("CreateMailing", $options);
+
         $mailingGUID = self::GetFld($result["CreateMailingResult"],"MailingGUID");
         return $mailingGUID;
 
