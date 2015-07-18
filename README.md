@@ -1,3 +1,7 @@
+## WARNING 
+ Use on L5 at your risk, I have made changes for another project and will not support this going forward. 
+
+
 docmail-laravel
 ===============
 
@@ -8,10 +12,8 @@ The Docmail Service Provider can be installed via [Composer](http://getcomposer.
 ```json
 {
     "require": {
-        "laravel/framework": "4.0.*",
-        "Softlabs/docmail": "1.*"
+        "Softlabs/docmail": "dev-master"
     },
-    "minimum-stability": "dev"
 }
 ```
 
@@ -21,7 +23,7 @@ Also you need to add the repository to composer.json:
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/Softlabs/docmail-laravel"
+        "url": "https://github.com/dunfy/docmail-laravel"
     }
 ]
 ```
