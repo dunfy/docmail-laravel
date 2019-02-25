@@ -18,14 +18,11 @@ class DocmailServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
-
-        $this->app['docmail'] = $this->app->share(function($app)
-        {
-            $docmail = new Docmail();
-            return $docmail;
-        });
-
+        	$this->app->singleton('docmail', function($app)
+		{
+            	$docmail = new Docmail();
+        	    return $docmail;
+		});
 	}
 
 	/**
